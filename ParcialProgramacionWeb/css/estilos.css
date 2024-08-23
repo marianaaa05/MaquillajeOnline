@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #555;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  position: relative;
+  height: 100%;
+}
+
+header {
+  max-width: 100%;
+  background: url(../imagenes/fondo.jpg);
+  text-align: center;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  padding: 80px;
+}
+
+.inventarioTitulo {
+  color: #cb0505;
+}
+
+.inventarioTotal {
+  position: absolute;
+  width: 350px;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+
+.limpiarEstilos::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.derecha {
+  float: right;
+}
+
+.totalMaybelline,
+.totalFenty,
+.totalChanel {
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.totalMaybelline {
+  margin-bottom: 10px;
+  background-color: #ff4958a2;
+}
+
+.totalFenty {
+  margin-bottom: 10px;
+  background-color: #ff4958a2;
+}
+
+.totalChanel {
+  margin-bottom: 10px;
+  background-color: #ff4958a2;
+}
+
+.inventarioMayTexto,
+.inventarioFenTexto,
+.inventarioChaTexto {
+  float: left;
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.inventarioMayValor,
+.inventarioFenValor,
+.inventarioChaValor {
+  letter-spacing: 1px;
+  float: left;
+}
+
+/* ------------------ */
+
+.contenedor {
+  width: 860px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.maybelline {
+  float: left;
+  width: 220px;
+  margin-right: 70px;
+  text-align: center;
+}
+
+.fenty {
+  float: left;
+  width: 220px;
+  text-align: center;
+}
+
+.chanel {
+  float: right;
+  width: 220px;
+  margin-left: 70px;
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.elemento {
+  padding: 20px;
+  border-bottom: 1px solid #ff4958a2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.elemento:first-child {
+  border-top: 1px solid #000000;
+}
+.elemento:nth-child(even) {
+  background-color: #ff4958a2;
+}
+
+.elementoDescripcion {
+  float: left;
+}
+
+.elementoValor {
+  float: left;
+  transition: transform 0.2s;
+}
+
+.elementoDisponible {
+  float: right;
+  transition: transform 0.2s;
+}
+
+.maybelline,
+.elementoValor,
+.chanel .elementoEliminarBtn {
+  color: #000000;
+}
+
+.maybelline,
+.elementoValor,
+.chanel .elementoEditarBtn {
+  color: #000000;
+}
+
+.elementoEliminar {
+  float: left;
+}
+
+.elementoEditar {
+  float: left;
+}
+
+.elementoEliminarBtn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
+}
+
+.elementoEditar {
+  float: right;
+}
+
+.elementoEditarBtn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.elementoValor,
+.elementoEliminarBtn {
+  color: #ff5049;
+}
+
+.elementoEliminarBtn:focus {
+  outline: none;
+}
+.elementoEliminarBtn:active {
+  transform: translateY(2px);
+}
+.elemento:hover .elementoEliminarBtn {
+  display: block;
+}
+
+/* .elemento:hover .elementoPorcentaje { transform: translateX(-20px); } */
+.elemento:hover .elementoValor {
+  transform: translateX(-20px);
+}
+
+/*Formulario*/
+
+.agregar {
+  padding: 14px;
+  border-bottom: 1px solid #ff4958a2;
+  background-color: #c4a4a6cb;
+}
+
+.agregarContenedor {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.agregarCategoria,
+.agregarValor,
+.agregarDescipcion,
+.agregarCantidad,
+.agregarDescripcionVenta {
+  width: 200px;
+  border: 1.5px solid #ff4958a2;
+  height: 44px;
+  font-size: 18px;
+  color: inherit;
+  background-color: #fcfcfc;
+  margin-right: 10px;
+  font-weight: 300;
+  transition: border 0.3s;
+}
+
+.agregarDescripcion {
+  width: 450px;
+}
+.agregarValor {
+  width: 100px;
+}
+
+.agregarBtn {
+  font-size: 35px;
+  background: none;
+  border: none;
+  color: #02db1f;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.1;
+  margin-left: 10px;
+}
+
+.agregarBtn:active {
+  transform: translateY(2px);
+}
+
+.agregarCategoria:focus,
+.agregarDescripcion:focus,
+.agregarValor:focus {
+  outline: none;
+  border: 1.5px solid #02db1f;
+}
+
+.agregarBtn:focus {
+  outline: none;
+}
+
+footer {
+  background-color: #e73535;
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  color: white;
+}
